@@ -1,42 +1,55 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/*-----------------------------------*\
+  #POPUP WINDOW
+\*-----------------------------------*/
+
+.popup {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.window {
+  width: 300px;
+  height: 25vh;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.window .title-bar {
+  height: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.window .title-bar-text {
+  letter-spacing: 2px;
+  font-weight: 600;
 }
 
-.card {
-  padding: 2em;
+.window .window-body { 
+  text-align: center; 
+  margin: 20px;
+  font-size: 13px;
+  color: black;
+} 
+
+.window .window-body p { 
+  margin-bottom: 1.5rem; 
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-align: justify;
 }
 
-.read-the-docs {
-  color: #888;
+.window-icon img { width: 3rem; }
+
+.window .window-body button { margin-right: 0.5rem; }
+
+/*-----------------------------------*\
+  #LOADING SCREEN
+\*-----------------------------------*/
+
+
+/*-----------------------------------*\
+  #MEDIA QUERIES
+\*-----------------------------------*/
+
+@media screen and (min-width: 1000px) {
+  .window { height: 22vh; }
 }

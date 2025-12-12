@@ -1,1 +1,64 @@
+/*-----------------------------------*\
+  #CUSTOM PROPERTY
+\*-----------------------------------*/
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8); 
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1); 
+    opacity: 1;
+  }
+}
+
+.transtion {
+  animation: zoomIn 0.5s forwards ease-out; 
+}
+
+/*-----------------------------------*\
+  #RESET
+\*-----------------------------------*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+html,
+body {
+  overflow: hidden;
+  color: black;
+  background: rgb(11, 135, 133);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+/*-----------------------------------*\
+  #REUSED STYLE
+\*-----------------------------------*/
+
+
 
