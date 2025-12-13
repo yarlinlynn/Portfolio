@@ -8,7 +8,7 @@
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.window {
+.window-popup {
   width: 300px;
   height: 25vh;
 }
@@ -45,11 +45,64 @@
   #LOADING SCREEN
 \*-----------------------------------*/
 
+/*-----------------------------------*\
+  #PORTFOLIO PAGE
+\*-----------------------------------*/
+
+.portfolio-page {
+  width: 90%;
+  max-width: 45rem;
+  height: 50vh;
+}
+
+.intro-text > h3 { font-size: 1.5rem; }
+
+.main-content {
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  grid-template-rows: 10vh 10vh;
+}
+
+.main-content .buttons {
+  background: none;
+  box-shadow: none;
+  min-height: 10vh;
+  min-width: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.5rem;
+}
+
+.main-content .buttons img { 
+  width: 100%;
+  margin-top: 10px;
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
 
 @media screen and (min-width: 1000px) {
-  .window { height: 22vh; }
+  .window-popup { height: 22vh; }
+
+  .portfolio-page { height: 40vh; }
+
+  .main-content { 
+    row-gap: 0.5rem;
+    column-gap: 0.5rem;
+  }
+
+  .main-content .buttons {
+    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #fff, inset -2px -2px grey, inset 2px 2px #dfdfdf;
+  }
+
+  .main-content .buttons img {
+    width: 60%; 
+  }
 }

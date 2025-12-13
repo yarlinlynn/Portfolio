@@ -1,13 +1,16 @@
 import { useEffect, useState } from 'react'
+import { usePortfolio } from '../context/PortfolioContext'
 
 import icon from '../assets/images/msg_question-0.png'
 
 function PopupWindow() {
 
+    const { chooseVersion } = usePortfolio();
+
   return (
 
         <div className="popup transtion">
-            <div className='window'>
+            <div className='window window-popup'>
                 <div className='title-bar'>
                     <div className='title-bar-text'>System message</div>
                     <div className="title-bar-controls">
@@ -23,8 +26,8 @@ function PopupWindow() {
                         Welcome! Before you can explore my portfolio, please choose an option below to fit what you're looking for.
                     </p>
 
-                    <button>I need a website</button>
-                    <button>I need a developer</button>
+                    <button onClick={() => chooseVersion("website")}>I need a website</button>
+                    <button onClick={() => chooseVersion("developer")}>I need a developer</button>
                 </div>
             </div>
         </div>
