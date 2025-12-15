@@ -60,5 +60,67 @@ a {
   #REUSED STYLE
 \*-----------------------------------*/
 
+.window .title-bar {
+  height: 25px;
+}
+
+.window .title-bar-text {
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.window .window-body { 
+  text-align: center; 
+  margin: 20px;
+  font-size: 13px;
+  color: black;
+} 
+
+.window-popup .window-body p { 
+  margin-bottom: 1.5rem; 
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  text-align: justify;
+}
+
+/*-----------------------------------*\
+  #POPUP WINDOW
+\*-----------------------------------*/
+
+.popup {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.window-popup {
+  width: 300px;
+  height: 25vh;
+}
+
+.window-icon img { width: 3rem; }
+
+.window-popup .window-body button { margin-right: 0.5rem; }
+
+/*-----------------------------------*\
+  #LOADING SCREEN
+\*-----------------------------------*/
+
+.loading-window { width: 300px; }
+
+.loading-window .title-bar {
+  justify-content: flex-start;
+  gap: 10px
+}
+
+.loading-window .title-bar img { width: 20px; }
+
+.loading-text {
+  display: flex;
+  align-items: center;
+  height: 12vh;
+}
+
 
 

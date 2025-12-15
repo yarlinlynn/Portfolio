@@ -1,60 +1,11 @@
 /*-----------------------------------*\
-  #POPUP WINDOW
-\*-----------------------------------*/
-
-.popup {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-.window-popup {
-  width: 300px;
-  height: 25vh;
-}
-
-.window .title-bar {
-  height: 25px;
-}
-
-.window .title-bar-text {
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-.window .window-body { 
-  text-align: center; 
-  margin: 20px;
-  font-size: 13px;
-  color: black;
-} 
-
-.window-popup .window-body p { 
-  margin-bottom: 1.5rem; 
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  text-align: justify;
-}
-
-.window-icon img { width: 3rem; }
-
-.window-popup .window-body button { margin-right: 0.5rem; }
-
-/*-----------------------------------*\
-  #LOADING SCREEN
-\*-----------------------------------*/
-
-/*-----------------------------------*\
   #PORTFOLIO PAGE
 \*-----------------------------------*/
 .buttons.toggle { display: none; }
 
 .portfolio-page {
   width: 100%;
-  /* max-width: 45rem; */
   height: 45vh;
-  /* margin-inline: 1rem; */
 }
 
 .portfolio-page.window {
