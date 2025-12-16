@@ -54,6 +54,56 @@
 }
 
 /*-----------------------------------*\
+  #CONTACT WINDOW
+\*-----------------------------------*/
+
+.window.contact-window {
+  width: 90%;
+  max-width: 400px;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%);
+  height: 50vh;
+}
+
+.email-form {
+  display: grid;
+  justify-content: left;
+  gap: 2rem;
+  width: 100%;
+}
+
+.email-form label {
+  display: flex;
+  gap: 1rem;
+}
+
+.email-form label.message {
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.email-form label input {
+  width: 15rem;
+  height: 4vh;
+  padding-left: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.email-form textarea {
+  width: 100%;
+  height: 15vh;
+}
+
+.email-form .actions {
+  position: fixed;
+  bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+/*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 

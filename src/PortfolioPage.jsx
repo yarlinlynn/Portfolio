@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import { usePortfolio } from './context/PortfolioContext'
+import WindowManager from './context/WindowManager'
 
 import about from './assets/images/msg_information-0.png'
 import work from './assets/images/directory_open_file_mydocs-4.png'
@@ -111,6 +112,7 @@ function Portfolio() {
         </ul> */}
         <div className="footer-text">© 2025 Yarlin Lynn</div>
       </footer>
+      <WindowManager/>
     </>
   )
 }
