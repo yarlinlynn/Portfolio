@@ -12,6 +12,7 @@ import homepage from './assets/images/windows-0.png'
 function Portfolio() {
 
   const { version, resetPortfolio} = usePortfolio();
+  const { openWindow } = usePortfolio();
 
   return (
     <>
@@ -43,14 +44,22 @@ function Portfolio() {
               <p>About</p>
             </div>
 
-            <div className='btn-container'>
-              <button className='buttons'>
-                <img src={work} alt='My Projects'/>
-                {/* { version === "website" && <Work/> }
-                { version === "developer" && <Projects/>} */}
-              </button>
-              <p>Work</p>
-            </div>
+            { version === "website" && 
+              <div className='btn-container'>
+                <button className='buttons'>
+                  <img src={work} alt='My Projects'/>
+                </button>
+                <p>Work</p>
+              </div>
+            }
+            { version === "developer" && 
+              <div className='btn-container'>
+                <button className='buttons'>
+                  <img src={work} alt='My Projects'/>
+                </button>
+                <p>Projects</p>
+              </div>
+            }
 
             <div className='btn-container'>
               <button className='buttons'>
@@ -58,7 +67,15 @@ function Portfolio() {
               </button>
               <p>FAQ</p>
             </div>
-
+            
+            {/* { version === "website" && 
+              <div className='btn-container'>
+                <button className='buttons'>
+                  <img src={booking} alt='Book an Appointment'/>
+                </button>
+                <p>Book</p>
+              </div>
+            } */}
             <div className='btn-container'>
               <button className='buttons'>
                 <img src={booking} alt='Book an Appointment'/>
@@ -67,7 +84,7 @@ function Portfolio() {
             </div>
 
             <div className='btn-container'>
-              <button className='buttons'>
+              <button className='buttons' onClick={() => openWindow("contact")}>
                 <img src={contact} alt='Contact Me'/>
               </button>
               <p>Contact</p>
