@@ -8,7 +8,7 @@ export function PortfolioProvider( {children} ) {
     const [activeWindow, setActiveWindow] = useState(null) //opens individual windows once clicked eg contact window
 
     const openWindow = (windowName) => setActiveWindow(windowName); // opens window when clicked
-    const closeWindow = setActiveWindow(null); //closes window when clicked
+    const closeWindow = () => setActiveWindow(null); //closes window when clicked
 
     const chooseVersion = (value) => setVersion(value);
     const resetPortfolio = () => {
