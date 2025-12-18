@@ -1,179 +1,35 @@
 /*-----------------------------------*\
   #PORTFOLIO PAGE
 \*-----------------------------------*/
-.buttons.toggle { display: none; }
 
 .portfolio-page {
+  /* background-image: url(/src/assets/images/portfolio_background_mobile.jpg); */
+  background-image: url(./assets/images/portfolio_background_desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
-  height: 45vh;
-}
-
-.portfolio-page.window {
-  box-shadow: none;
-  background: none;
-}
-
-.intro-text > h3 { font-size: 1.5rem; }
-
-.portfolio-page .title-bar { background: none; }
-
-.portfolio-page .title-bar .title-bar-text { display: none; }
-
-.main-content {
-  display: grid;
-  grid-template-columns: repeat(3, 0.9fr);
-  row-gap: 1rem;
-  column-gap: 1.5rem;
-  grid-template-rows: 13vh 13vh;
-  margin-top: 2rem;
-}
-
-.btn-container {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
 }
 
-.main-content .buttons {
-  min-height: 2rem;
-  min-width: 3rem;
-  padding-block: 0.5rem;
-  margin: 0;
-  border-radius: 0.5rem;
+.portfolio-page .window {
+  width: 35rem;
+  height: 55vh;
 }
 
-.main-content .buttons p {
-  color: white;
-  letter-spacing: 2px;
-}
 
-.main-content .buttons img { 
-  width: 40px;
-  height: 40px;
-}
-
-/*-----------------------------------*\
-  #CONTACT WINDOW
-\*-----------------------------------*/
-
-.window.contact-window {
-  width: 90%;
-  max-width: 400px;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%);
-  height: 50vh;
-}
-
-.email-form {
-  display: grid;
-  justify-content: left;
-  gap: 2rem;
-  width: 100%;
-}
-
-.email-form label {
-  display: flex;
-  gap: 1rem;
-}
-
-.email-form label.message {
-  flex-direction: column;
-  align-items: baseline;
-}
-
-.email-form label input {
-  width: 15rem;
-  height: 4vh;
-  padding-left: 0.5rem;
-  letter-spacing: 1px;
-}
-
-.email-form textarea {
-  width: 100%;
-  height: 15vh;
-}
-
-.email-form .actions {
-  position: fixed;
-  bottom: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
-
-footer {
-  position: fixed;
-  bottom: 5px;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.footer-text {
-  color: white;
-  font-size: 12px;
-  letter-spacing: 1px;
-}
-
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
-
-@media screen and (min-width: 600px) {
-  .buttons.toggle { 
-    display: block; 
-    background: none;
-    box-shadow: none;
-    margin-bottom: 0.5rem;
-    margin-left: -1rem;
+/* @media screen and (min-width: 1000px) {
+  .start_up-window {
+    background-image: url(./assets/images/startup-window_background-image_dekstop.jpg);
+    background-size: cover;
   }
 
-  .portfolio-page.window {
-    background: silver;
-    box-shadow: inset -1px -1px #0a0a0a, inset 1px 1px #dfdfdf, inset -2px -2px grey, inset 2px 2px #fff;
-    width: 35rem;
+  .container .window.glass {
+    width: 14rem;
   }
 
-  .portfolio-page .title-bar { background: linear-gradient(90deg, navy, #1084d0); }
+  .portfolio-page { background-size: 100%; }
 
-  .portfolio-page .title-bar .title-bar-text { display: block; }
-
-  .main-content {
-    grid-template-columns: repeat(5, 3rem);
-    grid-template-rows: 14vh;
-    position: fixed;
-    bottom: 3rem;
-    right: 0;
-    left: 0;
-    row-gap: 0;
-    column-gap: 3rem;
-    justify-content: center;
-  }
-
-  .main-content .btn-container p { letter-spacing: 1px; }
-
-  /* .main-content .buttons {
-    box-shadow: none;
-    background: none;
-  } */
-
-  .btn-container.toggle { display: none; }
-
-  .main-content .buttons img {
-    width: 50px;
-    height: 50px;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .window-popup { height: 22vh; }
-
-  .portfolio-page { height: 40vh; }
-
-}
+} */

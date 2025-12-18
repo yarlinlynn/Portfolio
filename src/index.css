@@ -34,14 +34,7 @@ html,
 body {
   overflow: hidden;
   color: black;
-  background: rgb(11, 135, 133);
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* background: rgb(11, 135, 133); */
 }
 
 button {
@@ -55,71 +48,58 @@ a {
   color: inherit;
 }
 
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
 
-.window .title-bar {
-  height: 25px;
+.title-bar-text {
+  font-weight: 500;
+  letter-spacing: 1px;
 }
 
-.window .title-bar-text {
-  letter-spacing: 2px;
-  font-weight: 600;
-}
-
-.window .window-body { 
-  text-align: center; 
-  margin: 20px;
-  font-size: 13px;
-  color: black;
-} 
-
-.window-popup .window-body p { 
-  margin-bottom: 1.5rem; 
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  text-align: justify;
+.start-program p {
+  color: white;
 }
 
 /*-----------------------------------*\
-  #POPUP WINDOW
+  #START UP WINDOW
 \*-----------------------------------*/
 
-.popup {
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.35s ease, transform 0.35s ease;
+.start_up-window {
+  background-image: url(/src/assets/images/startup-window_background-image_dekstop.jpg);
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
-.window-popup {
-  width: 300px;
-  height: 30vh;
-}
-
-.window-icon img { width: 3rem; }
-
-.window-popup .window-body button { margin-right: 0.5rem; }
-
-/*-----------------------------------*\
-  #LOADING SCREEN
-\*-----------------------------------*/
-
-.loading-window { width: 300px; }
-
-.loading-window .title-bar {
-  justify-content: flex-start;
-  gap: 10px
-}
-
-.loading-window .title-bar img { width: 20px; }
-
-.loading-text {
+.start_up-window {
+  height: 100vh;
   display: flex;
   align-items: center;
-  height: 12vh;
+  justify-content: center;
+}
+
+.container .window.glass {
+  width: 13rem;
+  margin: 0 auto;
+  padding: 0.75rem;
+  height: 12rem;
+  border: none;
+}
+
+.container .window.glass img {
+  width: 100%;
+  height: 100%;
+}
+
+.popup-btns { margin-top: 2rem; }
+
+.popup-btns button { margin-left: 1rem; }
+
+.loader.animate { 
+  margin: 1rem auto; 
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
 /*-----------------------------------*\

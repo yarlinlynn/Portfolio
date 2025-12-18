@@ -2,42 +2,58 @@ import { useState, useEffect } from 'react'
 
 import { usePortfolio } from "./context/PortfolioContext.jsx";
 
-import PopupWindow from "./components/PopupWindow.jsx";
-import LoadingWindow from './components/LoadingWindow.jsx';
-import Portfolio from "./PortfolioPage.jsx";
+import StartUpWindow from "./components/StartUpWindow.jsx";
+import Portfolio from "./Pages/PortfolioPage.jsx";
 
 import './App.css'
 
 function App() {
 
-  const { version } = usePortfolio();
-  const [loading, setLoading] = useState(false);
+  const { version, startupWindow, setStartupWindow } = usePortfolio();
+  const [ loading, setLoading] = useState(0);
 
-  // useEffect( () => {
-  //   // if(version) {
-  //   //   setLoading(true);
-  //   //       setTimeout(() => setLoading(false), 5000);
-  //   // }
-  //   if (version) {
-  //     setLoading(true);
+  useEffect( () => {
+    if(startupWindow !== "loading") return;
 
-  //     // simulate "app boot"
-  //     const timer = setTimeout(() => {
-  //       setLoading(false);
-  //     }, 4500);
+    setLoading(0);
 
-  //     return () => clearTimeout(timer);
-  //   }
-  // }, version)
-  
-  useEffect(() => {
-    if (version) {
-      setLoading(true);
-    }
-  }, [version]);
+    const loader = setInterval(() => {
+      setLoading((prev) => {
+        if (prev >= 95) {
+          clearInterval(loader);
+          setTimeout(() => setStartupWindow("done"), 400);
+          return 95;
+        }
 
-  if (!version) return <PopupWindow/>
-  if (loading) return <LoadingWindow onComplete={() => setLoading(false)} />
+        const increment =
+          prev < 60 ? 6 : prev < 80 ? 4 : 1.5;
+
+        return Math.min(prev + increment, 95);
+        });
+      }, 200);
+
+      return () => clearInterval(loader);
+    }, [startupWindow, setStartupWindow]);
+
+  //   const loader = setInterval(() => {
+  //     setLoading( (progress) => {
+  //       if(progress >= 95) {
+  //         clearInterval(loader);
+  //         setTimeout( () => {
+  //           setStartupWindow("done");
+  //         }, 400);
+  //         return 95;
+  //       }
+  //       return progress + Math.random() * 6 + 2
+  //     });
+  //   }, 200);
+
+  //   return () => clearInterval(loader);
+  // }, [startupWindow, setStartupWindow]);
+
+  if(!version || startupWindow !== "done") {
+    return <StartUpWindow loading={loading}/>;
+  }
 
   return <Portfolio/>
 
